@@ -1,0 +1,5 @@
+### Get all tasks
+GET http://localhost:3001 HTTP/1.1
+
+### Delete task
+DELETE http://localhost:3001/delete/6 HTTP/1.1
