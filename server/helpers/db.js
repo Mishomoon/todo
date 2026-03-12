@@ -1,14 +1,11 @@
 
 const { Pool } = require('pg')
 
-const openDb = () => {
+
+    const openDb = () => {
+  console.log('DB_HOST:', process.env.DB_HOST)
+  console.log('DB_NAME:', process.env.DB_NAME)
   const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
-    ssl: process.env.SSL === 'true' ? { rejectUnauthorized: false } : false
   })
   return pool
 }
