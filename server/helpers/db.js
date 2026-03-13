@@ -1,4 +1,3 @@
-
 const { Pool } = require('pg')
 
 const openDb = () => {
@@ -26,5 +25,6 @@ const query = (sql, values = []) => {
 }
 
 module.exports = {
-  query
+  query,
+  openDb
 }

@@ -4,6 +4,7 @@ const { todoRouter } = require('./routes/todo.js')
 const { openDb } = require('./helpers/db.js')
 
 const app = express()
+
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -21,7 +22,7 @@ async function initDb() {
     `)
     console.log("Task table ready")
   } catch (err) {
-    console.error("Database init error:", err)
+    console.error("Database error:", err)
   }
 }
 
