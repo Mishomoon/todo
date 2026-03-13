@@ -25,6 +25,5 @@ const query = (sql, values = []) => {
 }
 
 module.exports = {
-  query,
-  openDb
+  query
 }
